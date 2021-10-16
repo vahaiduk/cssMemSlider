@@ -19,28 +19,20 @@ body{
 main{
     margin: auto;
     /*width: 52.083%;*/
-    width: 1000px;
+    width: 1000px; 
     
 }
 input {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #999;
-  transition: 0.3s;
-  border-radius: 50%;
+  display: none;
 }
 
-input:checked {
-  border: 8px solid #999;
-}
-
-.slider{
-  height: 720px;
+#slider{
+  height: 560px;
   width: 100%;
   border: 1px solid #999;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 .slider-bottom{
@@ -48,3 +40,43 @@ input:checked {
     display: flex;
     justify-content: space-between;
 }
+
+#slider>ul{
+  list-style: none;
+  width: 500%;
+  transition: left 0.5s;
+  position: relative;  
+}
+
+#slider>ul>li {
+    width: 20%;
+    float: left; 
+}
+
+#slider>ul>li>img {
+    margin: auto;
+    width: 100%;
+}
+
+.slider-button #button-1:checked~#slider>ul { left: 0 }
+.slider-button #button-2:checked~#slider>ul { left: -100% }
+.slider-button #button-3:checked~#slider>ul { left: -200% }
+.slider-button #button-4:checked~#slider>ul { left: -300% }
+
+.link_radio label{ 
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: 1px solid #999;
+    transition: 0.5s;
+    border-radius: 50%;
+
+}   
+
+.link_radio label:hover{ 
+	background: #999;
+}
+
+input:checked {
+    border: 8px solid #999;
+  }
