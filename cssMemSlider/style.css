@@ -33,6 +33,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  border-radius: 1%;
 }
 
 .slider-bottom{
@@ -58,10 +59,28 @@ input {
     width: 100%;
 }
 
+.slider-button{
+    padding: auto;
+}
+
 .slider-button #button-1:checked~#slider>ul { left: 0 }
 .slider-button #button-2:checked~#slider>ul { left: -100% }
 .slider-button #button-3:checked~#slider>ul { left: -200% }
 .slider-button #button-4:checked~#slider>ul { left: -300% }
+
+.slider-button #button-1:checked~#text_img>ul { left: 0 }
+.slider-button #button-2:checked~#text_img>ul { left: -100% }
+.slider-button #button-3:checked~#text_img>ul { left: -200% }
+.slider-button #button-4:checked~#text_img>ul { left: -300% }
+
+.link_radio{
+    margin-top: -63px;
+    text-align: right;
+}
+
+p{
+    font-size:25px;
+}
 
 .link_radio label{ 
     width: 16px;
@@ -70,7 +89,6 @@ input {
     border: 1px solid #999;
     transition: 0.5s;
     border-radius: 50%;
-
 }   
 
 .link_radio label:hover{ 
@@ -79,4 +97,34 @@ input {
 
 input:checked {
     border: 8px solid #999;
+  }
+
+.link_radio label:hover{ 
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.bottom_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+#text_img>ul{
+    color: #999;
+    list-style: none;
+    width: 500%;
+    transition: left 0.2s;
+    position: relative;  
+  }
+
+#text_img>ul>li {
+    width: 20%;
+    float: left; 
+}
+
+#text_img{
+    height: 30px;
+    width: 91%;  
+    overflow: hidden;
+    margin: 20px 0;
   }
