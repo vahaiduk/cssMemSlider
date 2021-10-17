@@ -10,7 +10,7 @@ body{
 .title{
   font-size: 3em;
   color: #999;
-  text-align:center;
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -73,8 +73,16 @@ input {
 .slider-button #button-3:checked~#text_img>ul { left: -200% }
 .slider-button #button-4:checked~#text_img>ul { left: -300% }
 
+#button-1:checked~#active label:nth-child(1),
+#button-2:checked~#active label:nth-child(2),
+#button-3:checked~#active label:nth-child(3),
+#button-4:checked~#active label:nth-child(4){
+	background: white;
+    
+}
+
 .link_radio{
-    margin-top: -63px;
+    margin-top: -45px;
     text-align: right;
 }
 
@@ -93,6 +101,12 @@ p{
 
 .link_radio label:hover{ 
 	background: #999;
+}
+
+.link_radio label:active{ 
+    transition: 0.2s;
+	background: red;
+    border: 1px solid white;
 }
 
 input:checked {
@@ -128,3 +142,38 @@ input:checked {
     overflow: hidden;
     margin: 20px 0;
   }
+
+  @media only screen
+  and (max-width: 320px)
+  and (height: 568px) {
+    .title{
+        font-size: 2em;
+      }
+      
+    #slider{
+        width: 280px;
+        height: 156.8px;
+      }
+    main{
+        width:320px;
+    }
+    img{
+        max-width:280px;
+        height: 156.8px;
+    }
+    p{
+        font-size:20px;
+    }
+
+    .slider-bottom{
+        margin: 5px 0 5px 0; 
+    }
+    #text_img{
+        margin: 80px 0;
+        margin-left: 20px;
+    }
+    .link_radio {
+        margin-top: -160px;
+        text-align: center;
+    }
+}
